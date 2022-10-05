@@ -1,17 +1,27 @@
 header {
+    font-family: Calibri;
     width: 100%;
 }
 
 nav ul {
     display: flex;
     gap: 1rem;
-    background: #17181F;
+    background: #20212C;
     padding: 2rem;
     list-style: none;
 }
 
 nav ul li .link {
     text-decoration: none;
-    color: #f8f8f8;
+    color: #ccc;
     font-size: 1.5rem;
+}
+
+nav ul li .link:hover {
+    color: #f8f8f8;
+}
+  
+
+nav ul li .link:active {
+    color: white;
 }

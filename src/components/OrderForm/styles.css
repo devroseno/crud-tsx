@@ -1,4 +1,4 @@
-.register-orders-form {
+.order-form {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -6,13 +6,13 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    
 }
 
 .form-control {
     width: 50%;
     display: flex;
     flex-direction: column;
-    
 }
 
 .form-control label {
@@ -23,8 +23,7 @@
     font-size: 1.3rem;
     padding: 0.6rem;
     border: 1px solid #333;
-    background: #20212C;
-    color: #ccc;
+    color: #333;
     border-radius: 10px;
 }
 

@@ -1,7 +1,9 @@
-import './styles.css';
+import { useState, FormEvent } from 'react';
 import { api } from '../../services/api';
-import { Button } from '../../components/Button/index';
-import { FormEvent, useState } from 'react';
+import { PageControl } from '../../components/PageControl';
+import { OrderForm } from '../../components/OrderForm';
+
+//SWEETALERT
 import Swal from 'sweetalert2';
 
 export function Register() {
@@ -42,44 +44,16 @@ export function Register() {
 
     return(
         <main>
-            <section className="page-control">
-                <h2>Cadastro de Pedidos</h2>
-            </section>
-            <form className="register-orders-form" onSubmit={handleRegisterOrder}>
-                <div className="form-control">
-                    <label htmlFor="description">Descrição</label>
-                    <input
-                    type="text"
-                    id="description" 
-                    placeholder="Descreva o pedido"
-                    onChange={(event) => setDescription(event.target.value)}
-                    value={description}
-                    />
-                </div>
-                <div className="form-control">
-                    <label htmlFor="price">Preço</label>
-                    <input
-                    type="text"
-                    id="price"
-                    placeholder="Insira o preço total do pedido"
-                    onChange={(event) => setPrice(event.target.value)}
-                    value={price}
-                    />
-                </div>
-                <div className="form-control">
-                    <label htmlFor="details">Observação (opcional)</label>
-                    <input
-                    type="text"
-                    id="details"
-                    placeholder="Observações sobre o pedido"
-                    onChange={(event) => setDetails(event.target.value)}
-                    value={details}
-                    />
-                </div>
-                <div className="form-confirm">
-                    <Button type="submit">Cadastrar</Button>
-                </div>
-            </form>
+            <PageControl title="Cadastro de Pedidos"/>
+            <OrderForm
+                onSubmit={handleRegisterOrder}
+                description={description}
+                setDescription={setDescription}
+                price={price}
+                setPrice={setPrice}
+                details={details}
+                setDetails={setDetails}
+            />
         </main>
     )
 }

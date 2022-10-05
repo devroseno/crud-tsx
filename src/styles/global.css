@@ -14,3 +14,77 @@ textarea {
 main {
     margin: 2rem;
 }
+
+.table-container {
+    margin-top: 1rem;
+}
+
+.table-container table {
+    border: 1px solid #333;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    align-items: stretch;
+}
+
+.table-container table thead {
+    background: #20212C;
+    color: #ccc;
+}
+
+.table-container table tbody td,
+.table-container table thead th {
+    border: 1px solid #333;
+    padding: 1rem;
+}
+
+table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+    color: #000;
+}
+
+table tr td small {
+    opacity: 0.2;
+}
+
+table tr:hover td small {
+    opacity: 1;
+}
+
+.actions-btn {
+    align-items: stretch;
+    padding: 0.6rem 1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: filter .2s;
+    margin-right: 0.5rem;
+    border: none;
+    height: 2.5rem;
+}
+
+.edit-btn {
+    color: #f8f8f8;
+    background: #ffc107;
+}
+
+.delete-btn {
+    color: #f8f8f8;
+    background: #ff0a0a;
+}
+
+.check-btn {
+    background: #05b51a;
+    color: #f8f8f8;
+}
+
+.edit-btn:hover,
+.edit-btn:focus,
+.delete-btn:hover,
+.delete-btn:focus, 
+.check-btn:hover,
+.check-btn:focus {
+    filter: brightness(130%);
+}
